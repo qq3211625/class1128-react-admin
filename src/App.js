@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 //引入路由组件
 import Login from "./pages/login";
 import Admin from "./pages/admin";
@@ -16,7 +16,7 @@ class App extends Component {
             <Switch>
                 <Route path='/login' component={Login}/>
                 {/*暂时让他上来再login便开发*/}
-                <Redirect to='/login'/>
+                {/*<Redirect to='/login'/>*/}
                 <Route path='/' component={Admin}/>
             </Switch>
         )
